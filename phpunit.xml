@@ -7,7 +7,7 @@
 
     <coverage processUncoveredFiles="true">
         <include>
-            <directory>./landing</directory>
+            <directory>./mid</directory>
         </include>
         <report>
             <html outputDirectory="build/coverage"/>
