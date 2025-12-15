@@ -1,0 +1,5 @@
+.idea
+/build/
+landing.zip
+.phpunit.result.cache
+/vendor/
