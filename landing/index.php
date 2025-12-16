@@ -12,8 +12,6 @@ $keitaroPostbackUrl = 'https://keistream.com/3c218da/postback';
 if ($subid) {
     $postData = [
         'subid'  => $subid,
-        'status' => 'conversion', // можно указать custom статус
-        'payout' => 0,
     ];
 
     $ch = curl_init($keitaroPostbackUrl);
