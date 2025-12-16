@@ -21,9 +21,6 @@ class RedirectScriptTest extends TestCase
     public function testThrowsExceptionWhenSubidMissing()
     {
         $_REQUEST['target'] = 'https://example.com/offer';
-        $whitelist = \landing\Firewall::config('whitelist');
-        $_SERVER['REMOTE_ADDR'] = array_shift($whitelist);
-        $_REQUEST['secret'] = \landing\Firewall::config('secret');
 
         $this->expectException(\Exception::class);
         $this->expectExceptionMessage('Server error');
@@ -34,9 +31,6 @@ class RedirectScriptTest extends TestCase
     public function testThrowsExceptionWhenTargetMissing()
     {
         $_REQUEST['subid'] = 'abc123';
-        $whitelist = \landing\Firewall::config('whitelist');
-        $_SERVER['REMOTE_ADDR'] = array_shift($whitelist);
-        $_REQUEST['secret'] = \landing\Firewall::config('secret');
 
         $this->expectException(\Exception::class);
         $this->expectExceptionMessage('Server error');
@@ -48,9 +42,6 @@ class RedirectScriptTest extends TestCase
     {
         $_REQUEST['subid']  = 'abc123';
         $_REQUEST['target'] = 'https://example.com/offer';
-        $whitelist = \landing\Firewall::config('whitelist');
-        $_SERVER['REMOTE_ADDR'] = array_shift($whitelist);
-        $_REQUEST['secret'] = \landing\Firewall::config('secret');
 
         ob_start();
         try {

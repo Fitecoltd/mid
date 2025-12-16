@@ -1,6 +1,5 @@
 <?php
 
-require_once 'Firewall.php';
 require_once 'bootstrap.php';
 
 if (empty($_REQUEST['subid']) || empty($_REQUEST['target'])) {
