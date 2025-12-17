@@ -23,7 +23,7 @@ function send_to_keitaro($subid) {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
-    if (test()) {
+    if (!test()) {
         $response = curl_exec($ch);
     }
     curl_close($ch);

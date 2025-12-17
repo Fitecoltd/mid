@@ -1,6 +1,6 @@
 zip:
 	make clean
-	zip -r landing.zip landing
+	zip -r mid.zip landing
 
 clean:
 	rm -f mid.zip
