@@ -19,7 +19,7 @@ if (!empty($queryParams['broker'])) {
     $postData['sub_id_30'] = json_encode(['broker' => $queryParams['broker']]);
 }
 
-send_to_keitaro($queryParams);
+send_to_keitaro($postData);
 
 
 unset($queryParams['target']); // чтобы не дублировать target в строке
