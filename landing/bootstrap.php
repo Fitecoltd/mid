@@ -13,11 +13,8 @@ function test()
 }
 
 
-function send_to_keitaro($subid) {
+function send_to_keitaro($postData) {
     $keitaroPostbackUrl = 'https://keistream.com/3c218da/postback';
-    $postData = [
-        'subid' => $subid,
-    ];
 
     $ch = curl_init($keitaroPostbackUrl);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

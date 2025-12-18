@@ -11,9 +11,15 @@ require_once 'bootstrap.php';
 require_once 'Redirector.php';
 
 
+$postData = [
+    'subid' => $queryParams['aff_sub'],
+];
 
-send_to_keitaro($queryParams['aff_sub']);
+if (!empty($queryParams['broker'])) {
+    $postData['sub_id_30'] = json_encode(['broker' => $queryParams['broker']]);
+}
 
+send_to_keitaro($queryParams);
 
 
 unset($queryParams['target']); // чтобы не дублировать target в строке
