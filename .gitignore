@@ -1,5 +1,6 @@
 .idea
 /build/
 landing.zip
+mid.zip
 .phpunit.result.cache
 /vendor/
