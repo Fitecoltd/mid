@@ -15,10 +15,6 @@ $postData = [
     'subid' => $queryParams['aff_sub'],
 ];
 
-if (!empty($queryParams['broker'])) {
-    $postData['sub_id_30'] = json_encode(['broker' => $queryParams['broker']]);
-}
-
 send_to_keitaro($postData);
 
 
