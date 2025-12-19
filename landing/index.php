@@ -14,6 +14,7 @@ require_once 'Redirector.php';
 $postData = [
     'subid' => $queryParams['aff_sub'],
     'sub_id_14' => 1,
+    'goal_id' => 1,
 ];
 
  send_to_keitaro($postData); // Убрано, чтобы избежать дублей
