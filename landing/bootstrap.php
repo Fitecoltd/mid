@@ -27,12 +27,3 @@ function send_to_keitaro($postData)
     curl_close($ch);
 }
 
-function send_to_capi(array $params)
-{
-    $url = 'https://keistream.com/lander/fb-capi-6/index.php?' . http_build_query($params);
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 2);
-    curl_exec($ch);
-    curl_close($ch);
-}
