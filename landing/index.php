@@ -13,6 +13,7 @@ require_once 'Redirector.php';
 
 $postData = [
     'subid' => $queryParams['aff_sub'],
+    'sub_id_14' => 1,
 ];
 
 send_to_keitaro($postData);
